@@ -5,6 +5,7 @@
 #         Convert whatever unit to number density (dennum), then to the unit of your choice
 #         In other words, unitinp -> dennum -> unitout
 # Usage:
+#         from convert_h2o import convert_h2o
 #         wout = convert_h2o(p,t,winp,unitinp,unitout)
 # Input:  p       - Pressure profile in hPa
 #         t       - Temperature profile in K

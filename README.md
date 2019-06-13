@@ -19,11 +19,11 @@ from convert_h2o import convert_h2o
 wout = convert_h2o(p,t,winp,unitinp,unitout)
 ```
 
-- p       - Pressure profile in hPa
-- t       - Temperature profile in K
-- winp    - Water vapour concentration in:
-- unitinp - Input units
-- unitout - Output units
+1. p       - Pressure profile in hPa
+2. t       - Temperature profile in K
+3. winp    - Water vapour concentration in:
+4. unitinp - Input units
+5. unitout - Output units
 
 where unitinp,unitout, character:
 -                          'M' Mass Mixing Ratio (g/Kg)

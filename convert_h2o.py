@@ -112,6 +112,9 @@ Available choices are:
 ######################################################################
 # Main
 
+def get_module_version():
+    return 'py1.0'
+
 def convert_h2o(p, t, winp, unitinp, unitout):
     # Convert lists to numpy arrays
     p = np.array(p)

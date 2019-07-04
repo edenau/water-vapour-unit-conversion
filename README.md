@@ -28,7 +28,7 @@ wout = convert_h2o(p,t,winp,unitinp,unitout)
 where unitinp,unitout, character:
 -                          'M' Mass Mixing Ratio (g/Kg)
 -                          'V' Volume Mixing Ratio (ppv)
--                          'H' Relative Umidity (%)
+-                          'H' Relative Humidity (%)
 -                          'S' Specific Humidity
 -                          'D' Dew Point (K)
 -                          'P' Partial Pressure (hPa)

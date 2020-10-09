@@ -55,6 +55,9 @@ def H2N(p,t,winp,const):
     # saturation pressure
     densat = a * const['b'] * np.exp(const['c1'] + const['c2']*a + const['c3']*a*a) * 1e-6
     return densat * (winp/100)
+
+def S2N(p,t,winp,const):
+    return const['r'] * winp * const['rhoair']
 ######################################################################
 # Convert from number density (dennum -> unitout)
 
@@ -81,6 +84,9 @@ def N2C(p,t,dennum,const):
     for i in range(p.size-1):
         wout = wout + 0.5 / const['g'] * (mmr[i]+mmr[i+1]) * 0.1 * (p[i] - p[i+1])
     return wout
+
+def N2S(p,t,dennum,const):
+    return dennum /const['r'] / const['rhoair']
 ######################################################################
 # Error messages
 
@@ -158,7 +164,7 @@ def convert_h2o(p, t, winp, unitinp, unitout):
     switch_to_dennum = {'M':M2N,
                         #'V':V2N,
                         'H':H2N,
-                        #'S':S2N,
+                        'S':S2N,
                         #'D':D2N,
                         #'P':P2N,
                         'N': N2N,
